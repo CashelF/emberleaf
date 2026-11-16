@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <meta name="theme-color" content="#170e12" />
+    <title>Emberleaf — a small multiplayer shrine</title>
+    <meta name="description" content="Walk into a painted autumn valley with whoever else is there, light the stone lanterns on the way up to the shrine, and fight off the imps that put them out. No sign-up, on phones and laptops." />
+    <link rel="canonical" href="https://cashel.dev/emberleaf/" />
+    <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Emberleaf" />
+    <meta property="og:description" content="Walk a painted autumn valley with whoever else is there, and light the stone lanterns on the way up to the shrine." />
+    <meta property="og:url" content="https://cashel.dev/emberleaf/" />
+    <meta property="og:image" content="https://cashel.dev/EmberleafDemo.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="c" aria-label="A shrine among autumn maples"></canvas>
+    <div id="scrim"></div>
+    <div id="tags" aria-hidden="true"></div>
+
+    <header id="hud" hidden>
+      <div class="corner">
+        <a class="mark" href="/" aria-label="Back to cashel.dev">cf<span>.</span></a>
+        <button id="leave" type="button" aria-label="Leave this valley">Leave</button>
+      </div>
+      <div id="count" aria-live="off"></div>
+      <nav>
+        <button id="invite" type="button">Invite</button>
+        <button id="sound" type="button" aria-pressed="false">Sound</button>
+      </nav>
+    </header>
+
+    <p id="prompt" hidden></p>
+    <div id="hearts" aria-hidden="true"></div>
+    <div id="mask" hidden role="img" aria-label="You are wearing the fox's mask"></div>
+    <div id="stick" hidden><i></i></div>
+    <button id="act" type="button" hidden aria-label="Ring your staff, light a lantern, or let a lantern go"><i></i></button>
+    <div id="toast" role="status" aria-live="polite"></div>
+
+    <section id="start" class="panel" aria-labelledby="start-title">
+      <p class="eyebrow">A small multiplayer shrine</p>
+      <h1 id="start-title">Emberleaf</h1>
+      <label class="field">
+        <span>Name</span>
+        <input id="name" type="text" maxlength="12" autocomplete="off" autocapitalize="words" spellcheck="false" />
+      </label>
+      <div class="field">
+        <span id="colour-label">Robe</span>
+        <div id="swatches" role="radiogroup" aria-labelledby="colour-label"></div>
+      </div>
+      <div class="actions">
+        <button id="play" class="solid" type="button">Walk in</button>
+        <button id="friends" class="line" type="button">Private valley</button>
+      </div>
+      <p id="kept" class="kept" hidden></p>
+    </section>
+
+    <section id="status" class="sheet" hidden aria-live="polite">
+      <h2 id="status-title"></h2>
+      <p id="status-text" class="lede"></p>
+      <div class="actions">
+        <button id="status-action" class="solid" type="button"></button>
+      </div>
+    </section>
+
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
