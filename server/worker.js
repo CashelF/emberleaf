@@ -13,8 +13,8 @@ const BOT_COLOR = COLORS.length - 1;
 // The monks who keep a quiet valley company. `speed` is in metres a second, `rest` is how
 // long they stand at each stop, in ms, and `from` is where on ROUTE they begin.
 const BOTS = [
-  { name: "Ash", speed: 2.1, rest: [900, 5200], from: 9 },
-  { name: "Wren", speed: 2.5, rest: [600, 3600], from: 16 },
+  { name: "Marvin", speed: 2.1, rest: [900, 5200], from: 9 },
+  { name: "Trillian", speed: 2.5, rest: [600, 3600], from: 16 },
 ];
 const ORIGIN = /^https:\/\/(www\.)?cashel\.dev$|^http:\/\/(localhost|127\.0\.0\.1)(:\d+)?$/;
 // A room's socket, or with /stats what the start screen says about it.

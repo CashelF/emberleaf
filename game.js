@@ -1661,7 +1661,7 @@ if (SOLO) {
   soloMobs = makeMobs();
   soloMobs.forEach((mob) => addMob([mob.id, mob.x, mob.z, mob.a, mob.stance, mob.k]));
   hands.dress(COLORS[profile.c]);
-  [[1, "Ash", 9], [2, "Wren", 16]].forEach(([id, name, stop]) => {
+  [[1, "Marvin", 9], [2, "Trillian", 16]].forEach(([id, name, stop]) => {
     const who = addPilgrim({ id, name, c: COLORS.length - 1, bot: true, x: ROUTE[stop][0], z: ROUTE[stop][1], a: 0 });
     who.stop = stop;
   });

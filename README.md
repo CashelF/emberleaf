@@ -69,7 +69,7 @@ its own link, and anyone who opens the link joins it. A valley exists from the m
 first visitor arrives until its last one leaves, and its lanterns go dark with it. Only the
 count of how often it has been fully lit is kept.
 
-Two monks, Ash and Wren, walk the path so that a lone visitor has company. They light a
+Two monks, Marvin and Trillian, walk the path so that a lone visitor has company. They light a
 lantern now and then, and leave as people arrive, so that there are always at least three
 figures in a valley. The creatures leave the monks alone. A monk who rings its staff beside
 someone struck down lifts them like anyone else, and the monks let a paper lantern go too.
